@@ -33,6 +33,11 @@ const router = createRouter({
       path: '/rawShader',
       name: 'RawShader',
       component: () => import('../views/RawShader.vue')
+    },
+    {
+      path: '/css2dDemo',
+      name: 'CSS2dDemo',
+      component: () => import('../views/CSS2dDemo.vue')
     }
   ]
 })

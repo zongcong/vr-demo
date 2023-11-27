@@ -9,6 +9,7 @@ const routerList = ref([
   {name: 'FirstController', menuName: '第一人称+碰撞检测（Octree）demo'},
   {name: 'Cannon', menuName: 'Cannon物理引擎demo（未实现）'},
   {name: 'RawShader', menuName: '着色器demo'},
+  {name: 'CSS2dDemo', menuName: 'CSS2DRenderer-demo'},
 ])
 
 const handleView = (name: string): void => {
