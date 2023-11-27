@@ -38,6 +38,11 @@ const router = createRouter({
       path: '/css2dDemo',
       name: 'CSS2dDemo',
       component: () => import('../views/CSS2dDemo.vue')
+    },
+    {
+      path: '/CSS3dDemo',
+      name: 'CSS3dDemo',
+      component: () => import('../views/CSS3dDemo.vue')
     }
   ]
 })

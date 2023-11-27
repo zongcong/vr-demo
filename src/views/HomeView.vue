@@ -9,7 +9,8 @@ const routerList = ref([
   {name: 'FirstController', menuName: '第一人称+碰撞检测（Octree）demo'},
   {name: 'Cannon', menuName: 'Cannon物理引擎demo（未实现）'},
   {name: 'RawShader', menuName: '着色器demo'},
-  {name: 'CSS2dDemo', menuName: 'CSS2DRenderer-demo'},
+  {name: 'CSS2dDemo', menuName: 'CSS2DRenderer-demo-无法被模型遮挡(可以用作弹窗信息展示)'},
+  {name: 'CSS3dDemo', menuName: 'CSS3DRenderer-demo-无法被模型遮挡(可以用作弹窗信息展示，通过设置lookAt(camera.position)始终朝向相机位)'},
 ])
 
 const handleView = (name: string): void => {
