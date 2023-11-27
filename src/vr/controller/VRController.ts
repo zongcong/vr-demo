@@ -1,4 +1,4 @@
-import {EventDispatcher,Vector2, Quaternion, Euler} from 'three';
+import { EventDispatcher,Vector2, Quaternion, Euler, Camera } from 'three';
 
 export class VRController extends EventDispatcher {
     camera;
@@ -12,7 +12,7 @@ export class VRController extends EventDispatcher {
     dampingFactor;
     enableDamping;
 
-    constructor(camera, domElement) {
+    constructor(camera: Camera, domElement: HTMLElement) {
         super();
         // 相机对象
         this.camera = camera;
@@ -39,7 +39,7 @@ export class VRController extends EventDispatcher {
         this.domElement.addEventListener('mouseleave', this.onMouseUp.bind(this));
     }
 
-    setEnabled(value) {
+    setEnabled(value: boolean) {
         this.enabled = value;
     }
 
@@ -47,21 +47,21 @@ export class VRController extends EventDispatcher {
         return this.enabled;
     }
 
-    onMouseDown(event) {
+    onMouseDown(event: Event) {
         if (!this.getEnabled()) return;
         event.preventDefault();
         this.domElement.style.cursor = 'grab';
         this.domElement.addEventListener('mousemove', this.onMouseMoveBound);
     }
 
-    onMouseUp(event) {
+    onMouseUp(event: Event) {
         if (!this.getEnabled()) return;
         event.preventDefault();
         this.domElement.style.cursor = 'auto';
         this.domElement.removeEventListener('mousemove', this.onMouseMoveBound);
     }
 
-    onMouseMove(event) {
+    onMouseMove(event: any) {
         if (!this.getEnabled()) return;
         event.preventDefault();
 
