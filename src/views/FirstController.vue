@@ -87,7 +87,7 @@ const onResize = () => {
 const loadModel = () => {
   const loader = new GLTFLoader()
   const dracoLoader = new DRACOLoader()
-  dracoLoader.setDecoderPath(`/draco/`)
+  dracoLoader.setDecoderPath(`./draco/`)
   dracoLoader.setDecoderConfig({ type: 'js' })
   dracoLoader.preload()
   loader.setDRACOLoader(dracoLoader)

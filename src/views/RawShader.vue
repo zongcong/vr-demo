@@ -49,7 +49,7 @@ const init = ():void=>{
       uFrequency: { value: new THREE.Vector2(10, 5) },
       uTime: { value: 0 },
       uColor: { value: new THREE.Color('orange') },
-      uTexture: { value: textureLoader.load('/0.jpg') }
+      uTexture: { value: textureLoader.load('./0.jpg') }
     }
   })
   const plane = new THREE.Mesh( geometry, material);
