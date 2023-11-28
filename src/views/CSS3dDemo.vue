@@ -20,7 +20,7 @@ const init = (): void => {
   // 创建一个 CSS3DRenderer
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
+  threeRef.value.appendChild(renderer.domElement);
 
   const css3dRenderer = new CSS3DRenderer();
   css3dRenderer.setSize(window.innerWidth, window.innerHeight);
