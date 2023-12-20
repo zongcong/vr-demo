@@ -13,6 +13,7 @@ const routerList = ref([
   {name: 'CSS3dDemo', menuName: 'CSS3DRenderer-demo-无法被模型遮挡(可以用作弹窗信息展示，通过设置lookAt(camera.position)始终朝向相机位)'},
   {name: 'Clock', menuName: '使用Clock对象方法getDelta移动物体（相机等）'},
   {name: 'FirstPersonRoaming', menuName: '第一人称漫游'},
+  {name: 'OrbitControls', menuName: 'OrbitControls 相机动画'},
 ])
 
 const handleView = (name: string): void => {

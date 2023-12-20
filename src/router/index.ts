@@ -53,6 +53,11 @@ const router = createRouter({
       path: '/FirstPersonRoaming',
       name: 'FirstPersonRoaming',
       component: () => import('../views/FirstPersonRoaming.vue')
+    },
+    {
+      path: '/OrbitControls',
+      name: 'OrbitControls',
+      component: () => import('../views/OrbitControls.vue')
     }
   ]
 })
