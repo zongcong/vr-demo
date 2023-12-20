@@ -43,6 +43,16 @@ const router = createRouter({
       path: '/CSS3dDemo',
       name: 'CSS3dDemo',
       component: () => import('../views/CSS3dDemo.vue')
+    },
+    {
+      path: '/Clock',
+      name: 'Clock',
+      component: () => import('../views/Clock.vue')
+    },
+    {
+      path: '/FirstPersonRoaming',
+      name: 'FirstPersonRoaming',
+      component: () => import('../views/FirstPersonRoaming.vue')
     }
   ]
 })
