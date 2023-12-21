@@ -1,0 +1,26 @@
+import{S as x,P as g,A as h,W as y,b as C,T as P,at as T,a1 as _,V as S,C as E,c as F,n as M}from"./three.module-7764d4a2.js";import{O as b}from"./OrbitControls-411e5027.js";import{d as k,r as q,o as j,c as A,a as H}from"./index-c59fbca8.js";const R=`uniform vec2 uFrequency;\r
+uniform float uTime;\r
+\r
+varying vec2 vUv;\r
+varying float vElevation;\r
+\r
+void main() {\r
+  vUv = uv;\r
+  vec4 modelPosition = modelMatrix * vec4(position, 1.0);\r
+  float elevation = sin(modelPosition.x * uFrequency.x - uTime) * 0.1;\r
+  elevation += sin(modelPosition.y * uFrequency.y - uTime) * 0.1;\r
+//modelPosition.z += elevation;\r
+  vec4 viewPosition = viewMatrix * modelPosition;\r
+  vec4 projectedPosition = projectionMatrix * viewPosition;\r
+  gl_Position = projectedPosition;\r
+  vElevation = elevation;\r
+}`,U=`uniform sampler2D uTexture;\r
+\r
+varying vec2 vUv;\r
+varying float vElevation;\r
+\r
+void main() {\r
+  vec4 textureColor = texture2D(uTexture, vUv);\r
+  textureColor.rgb *= vElevation * 2.0 + 0.5;\r
+  gl_FragColor = textureColor;\r
+}`,z=k({__name:"RawShader",setup(W){const t=q(),d=()=>{const n=new x,a=new M,r=new g(70,window.innerWidth/window.innerHeight,.1,1e3);r.position.set(0,0,1);const m=new h(5);n.add(m);const o=new y,i=new b(r,o.domElement);i.update(),o.setSize(window.innerWidth,window.innerHeight),t.value.appendChild(o.domElement);const s=new C(1,32,16),l=s.attributes.position.count,v=new Float32Array(l);for(let e=0;e<l;e++)v[e]=Math.random();const p=new P,c=new T({vertexShader:R,fragmentShader:U,side:_,transparent:!0,uniforms:{uFrequency:{value:new S(10,5)},uTime:{value:0},uColor:{value:new E("orange")},uTexture:{value:p.load("./0.jpg")}}}),w=new F(s,c);n.add(w);function u(){i.update(),f(),o.render(n,r),requestAnimationFrame(u)}const f=()=>{const e=a.getElapsedTime();c.uniforms.uTime.value=e};u()};return j(()=>{d()}),(n,a)=>(H(),A("div",{ref_key:"threeRef",ref:t},null,512))}});export{z as default};
