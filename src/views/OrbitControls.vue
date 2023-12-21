@@ -61,16 +61,6 @@ const init = (): void => {
         .start();
   }
 
-  function moveCamera() {
-    if(isMove) {
-
-    } else {
-      const cameraPos0 = new THREE.Vector3(4,0,4)
-      const target0 = new THREE.Vector3(0, 0, 0);
-      createCameraTween(cameraPos0, target0)
-    }
-  }
-
   document.querySelector('#reset').addEventListener('click', function () {
     // 相机从当前位置camera.position回到整体预览状态
     // 相机整体预览对应的位置和观察目标
