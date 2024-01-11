@@ -14,6 +14,7 @@ const routerList = ref([
   {name: 'Clock', menuName: '使用Clock对象方法getDelta移动物体（相机等）'},
   {name: 'FirstPersonRoaming', menuName: '第一人称漫游'},
   {name: 'OrbitControls', menuName: 'OrbitControls 相机动画'},
+  {name: 'ThreeMeshBvhDemo', menuName: 'three-mesh-bvh 碰撞检测'},
 ])
 
 const handleView = (name: string): void => {

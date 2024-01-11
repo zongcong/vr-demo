@@ -58,6 +58,11 @@ const router = createRouter({
       path: '/OrbitControls',
       name: 'OrbitControls',
       component: () => import('../views/OrbitControls.vue')
+    },
+    {
+      path: '/ThreeMeshBvhDemo',
+      name: 'ThreeMeshBvhDemo',
+      component: () => import('../views/ThreeMeshBvhDemo.vue')
     }
   ]
 })
