@@ -63,6 +63,11 @@ const router = createRouter({
       path: '/ThreeMeshBvhDemo',
       name: 'ThreeMeshBvhDemo',
       component: () => import('../views/ThreeMeshBvhDemo.vue')
+    },
+    {
+      path: '/ShaderMaterial',
+      name: 'ShaderMaterial',
+      component: () => import('../views/ShaderMaterial.vue')
     }
   ]
 })
