@@ -19,7 +19,7 @@ export const init = (threeDom: HTMLCanvasElement): void => {
 
     // 加载环境纹理
     const rgbELoader = new RGBELoader()
-    rgbELoader.loadAsync('/1k.hdr').then((texture) => {
+    rgbELoader.loadAsync('./1k.hdr').then((texture) => {
         texture.mapping = THREE.EquirectangularReflectionMapping;
         scene.background = texture;
         scene.environment = texture;
@@ -45,7 +45,7 @@ export const init = (threeDom: HTMLCanvasElement): void => {
     let lightBox = null
     const lightGroup = new THREE.Group()
     const gltfLoader = new GLTFLoader()
-    gltfLoader.load('/model/fly.glb', (gltf) => {
+    gltfLoader.load('./model/fly.glb', (gltf) => {
         console.log(gltf.scene)
         gltf.scene.scale.set(0.2, 0.2, 0.2);
         // scene.add(gltf.scene);
