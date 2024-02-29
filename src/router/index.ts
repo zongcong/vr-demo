@@ -68,6 +68,11 @@ const router = createRouter({
       path: '/ShaderMaterial',
       name: 'ShaderMaterial',
       component: () => import('../views/ShaderMaterial.vue')
+    },
+    {
+      path: '/FlyLight',
+      name: 'FlyLight',
+      component: () => import('../views/FlyLight.vue')
     }
   ]
 })
